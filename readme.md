@@ -1,1 +1,1 @@
-Derived from simple Java Project and not improved
+Derived from MoneySplitterJava Project, converted to Kotlin and not improved

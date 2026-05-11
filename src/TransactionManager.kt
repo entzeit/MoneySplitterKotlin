@@ -1,7 +1,6 @@
 import kotlin.math.absoluteValue
 
 class TransactionManager(val debtManager: DebtManager) {
-    //todo: Injection? CDI?
     var transactions = mutableListOf<Transaction>()
 
     fun calculateTransactions() {
