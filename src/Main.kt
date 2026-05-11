@@ -3,6 +3,11 @@ fun main(args: Array<String>) {
         println("Usage: java Splitter <file.txt>")
         return
     }
-    val manager = BillManager.fromFile(args[0])
-    manager.printBills()
+    val billManager = BillManager.fromFile(args[0])
+    billManager.printBills()
+    val debtManager = DebtManager()
+    debtManager.calculateDebts(billManager.bills)
+    val transactionManager = TransactionManager(debtManager)
+    transactionManager.calculateTransactions()
+    println(transactionManager)
 }
